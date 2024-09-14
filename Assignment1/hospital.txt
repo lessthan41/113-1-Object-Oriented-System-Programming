@@ -1,0 +1,69 @@
+Application: Hospital Management system
+
+Class Hospital
+-----------------
+    Attributes:
+    - Container of Doctors
+        accessed by doctorID
+    - Container of Patients
+        accessed by patientID
+    - Container of Rooms
+        accessed by roomNumber
+-----------------
+    Methods:
+    + getAllPatients() : Container of Patients
+    + getAllDoctors() : Container of Doctors
+    + getAllRooms() : Container of Rooms
+    + getPatient(patientID : String) : Patient
+    + getDoctor(doctorID : String) : Doctor
+    + getEmptyRoom() : Room
+    + admitPatient(name : String, emerContactPerson : String) : String(patientID)
+    + dischargePatient(patientID : String) : void
+    + assignDoctor(patientID : String, doctorID : String) : void
+end of class Hospital
+
+Class Patient
+-----------------
+    Attributes:
+    - name: String
+    - patientID: String
+    - emerContactPerson: String
+    - roomNumber: String
+    - Container of doctorIDs
+        accessed by index
+-----------------
+    Methods:
+    + getAllDoctors() : Container of doctorIDs
+    + getPatientID() : String
+    + getEmerContactPerson() : String
+    + getRoomNumber() : String
+    + assignDoctor(doctorID : String) : void
+    + removeDoctor(doctorID : String) : void
+end of class Patient
+
+Class Doctor
+-----------------
+    Attributes:
+    - name: String
+    - doctorID: String
+    - Container of patientIDs
+        accessed by index
+-----------------
+    Methods:
+    + getAllPatients() : Container of patientIDs
+    + getDoctorID() : String
+    + assignPatient(patientID : String) : void
+    + removePatient(patientID : String) : void
+end of class Doctor
+
+Class Room
+-----------------
+    Attributes:
+    - roomNumber: String
+    - patientID: String ("" means room available)
+-----------------
+    Methods:
+    + getRoomNumber() : String
+    + getPatientID() : String
+    + setPatientID(patientID : String) : void
+end of class Room
