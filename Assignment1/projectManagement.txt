@@ -1,0 +1,149 @@
+Application: Project Management System
+
+Class VideoGameStudio
+-----------------
+    Attributes:
+    - Container of Games
+        accessed by gameID
+    - Container of TeamLeaders
+        accessed by teamLeaderID
+    - Container of TeamMembers
+        accessed by teamMemberID
+    - Container of Contractors
+        accessed by contractorID
+-----------------
+    Methods:
+    + getAllGames() : Container of Games
+    + getAllLeaders() : Container of TeamLeaders
+    + getAllMembers() : Container of TeamMembers
+    + getAllContractors() : Container of Contractors
+    + getGame(gameID : String) : Game
+    + getLeader(teamLeaderID : String) : TeamLeader
+    + getMember(teamMemberID : String) : TeamMember
+    + getContractor(contractorID : String) : Contractor
+    + addGame(name : String) : String(gameID)
+    + addLeader(name : String) : String(teamLeaderID)
+    + addMember(name : String) : String(teamMemberID)
+    + addContractor(name : String) : String(contractorID)
+    + removeGame(gameID : String) : void
+    + removeLeader(teamLeaderID : String) : void
+    + removeMember(teamMemberID : String) : void
+    + removeContractor(contractorID : String) : void
+end of class VideoGameStudio
+
+Class Game
+-----------------
+    Attributes:
+    - name: String
+    - gameID: String
+    - Container of Strings(teamLeaderID)
+        accessed by index
+    - Container of Strings(teamMemberID)
+        accessed by index
+    - Container of Strings(contractorID)
+        accessed by index
+    - Container of Files
+        accessed by fileID
+    - Container of Tasks
+        accessed by taskID
+-----------------
+    Methods:
+    + getAllLeadersID() : Container of Strings(teamLeaderID)
+    + getAllMembersID() : Container of Strings(teamMemberID)
+    + getAllContractorsID() : Container of Strings(contractorID)
+    + getAllFiles() : Container of Files
+    + getAllTasks() : Container of Tasks
+
+    + getGameName() : String
+    + getGameID() : String
+    + getFile(fileID : String) : File
+    + getTask(taskID : String) : Task
+
+    + addLeader(teamLeaderID : String) : void
+    + addmember(teamMemberID : String) : void
+    + addContractor(contractorID : String) : void
+    + addFile(name : String, fileID : String) : void
+    + addTask(name : String, taskID : String) : void
+
+    + removeLeader(teamLeaderID : String) : void
+    + removeMember(teamMemberID : String) : void
+    + removeContractor(contractorID : String) : void
+    + removeFile(fileID : String) : void
+    + removeTask(taskID : String) : void
+end of class Game
+
+Class TeamLeader
+-----------------
+    Attributes:
+    - name: String
+    - leaderID: String
+    - Container of Strings(gameID)
+        accessed by index
+-----------------
+    Methods:
+    + getLeaderName() : String
+    + getLeaderID() : String
+    + getAllGameID() : Container of Strings(gameID)
+    + addGameID(gameID : String) : void
+    + removeGameID(gameID : String) : void
+end of class TeamLeader
+
+Class TeamMember
+-----------------
+    Attributes:
+    - name: String
+    - memberID: String
+    - gameID: String
+-----------------
+    Methods:
+    + getMemberName() : String
+    + getMemberID() : String
+    + getGameID() : String
+    + setGameID(gameID : String) : void
+end of class TeamMember
+
+Class Contractor
+-----------------
+    Attributes:
+    - name: String
+    - contractorID: String
+    - Container of Strings(gameID)
+        accessed by index
+-----------------
+    Methods:
+    + getContractorName() : String
+    + getContractorID() : String
+    + getAllGameID() : Container of Strings(gameID)
+    + addGameID(gameID : String) : void
+    + removeGameID(gameID : String) : void
+end of class Contractor
+
+Class File
+-----------------
+    Attributes:
+    - name: String
+    - fileID: String
+    - gameID: String
+-----------------
+    Methods:
+    + getFileName() : String
+    + getFileID() : String
+    + getGameID() : String
+    + setFileName(name : String) : void
+    + setGameID(gameID : String) : void
+end of class File
+
+Class Task
+-----------------
+    Attributes:
+    - name: String
+    - taskID: String
+    - gameID: String
+-----------------
+    Methods:
+    + getTaskName() : String
+    + getTaskID() : String
+    + getGameID() : String
+    + setTaskName(name : String) : void
+    + setGameID(gameID : String) : void
+end of class Task

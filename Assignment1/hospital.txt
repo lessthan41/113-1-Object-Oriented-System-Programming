@@ -1,4 +1,4 @@
-Application: Hospital Management system
+Application: Hospital Management System
 
 Class Hospital
 -----------------
@@ -9,17 +9,21 @@ Class Hospital
         accessed by patientID
     - Container of Rooms
         accessed by roomNumber
+    - Container of Strings(roomNumber available)
+        accessed in order first to last
 -----------------
     Methods:
-    + getAllPatients() : Container of Patients
     + getAllDoctors() : Container of Doctors
+    + getAllPatients() : Container of Patients
     + getAllRooms() : Container of Rooms
-    + getPatient(patientID : String) : Patient
     + getDoctor(doctorID : String) : Doctor
-    + getEmptyRoom() : Room
+    + getPatient(patientID : String) : Patient
+    + getRoom(roomNumber : String) : Room
     + admitPatient(name : String, emerContactPerson : String) : String(patientID)
     + dischargePatient(patientID : String) : void
     + assignDoctor(patientID : String, doctorID : String) : void
+    + unassignDoctor(patientID : String, doctorID : String) : void
+    + assignRoom(patientID : String) : String(roomNumber)
 end of class Hospital
 
 Class Patient
@@ -29,14 +33,16 @@ Class Patient
     - patientID: String
     - emerContactPerson: String
     - roomNumber: String
-    - Container of doctorIDs
+    - Container of Strings(doctorID)
         accessed by index
 -----------------
     Methods:
-    + getAllDoctors() : Container of doctorIDs
+    + getPatientName() : String
     + getPatientID() : String
     + getEmerContactPerson() : String
     + getRoomNumber() : String
+    + getAllDoctors() : Container of Strings(doctorID)
+    + setRoomNumber(roomNumber : String) : void
     + assignDoctor(doctorID : String) : void
     + removeDoctor(doctorID : String) : void
 end of class Patient
@@ -46,12 +52,13 @@ Class Doctor
     Attributes:
     - name: String
     - doctorID: String
-    - Container of patientIDs
+    - Container of Strings(patientID)
         accessed by index
 -----------------
     Methods:
-    + getAllPatients() : Container of patientIDs
+    + getDoctorName() : String
     + getDoctorID() : String
+    + getAllPatients() : Container of Strings(patientID)
     + assignPatient(patientID : String) : void
     + removePatient(patientID : String) : void
 end of class Doctor
