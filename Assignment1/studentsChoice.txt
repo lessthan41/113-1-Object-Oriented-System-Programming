@@ -1,8 +1,95 @@
-Application: Project Management System
+Application: Phasmophobia
 
-Class Contractor
+Description:
+Phasmophobia is a cooperative horror game, where players take on the roles of paranormal investigators. The objective is to enter haunted locations and collect evidence of ghost activity using various tools such as EMF readers, spirit boxes, and thermometers.
+
+Requirements:
+Each type of ghost has unique hunting speed, and it provides exactly three types of evidence. Players must identify the ghost type by analyzing these pieces of evidence. A player can carry up to three items in their inventory. They can only pick up a new item if at least one slot in their inventory is empty. Items can be picked up, used, or dropped by players. Each time a player uses an item, there is a success rate that determines whether the evidence will be revealed. Each player has a sanity value ranging from 100 to 0, and the ghost will begin hunting if the average sanity value of all players falls below a threshold specific to the ghost type. If a player is caught by the ghost, they will die.
+
+
+Class GameFlow
 -----------------
-    Attributes:       
+    Attributes:
+    - ghost: Ghost
+    - Container of Players
+        accessed by playerID
 -----------------
     Methods:
-end of class Contractor
+    + getGhost() : Ghost
+    + getAllPlayers() : Container of Players
+    + getPlayer(playerID : String) : Player
+
+    + setGhost(ghost : Ghost) : void
+    + addPlayer(playerID : String) : void
+    + removePlayer(playerID : String) : void
+
+    + gameStart() : void
+    + checkHunting() : Boolean
+    + reduceSanity(playerID : String) : void
+    + gameEnd() : Boolean  // return win or lose
+end of class GameFlow
+
+Class Ghost
+-----------------
+    Attributes:
+    - ghostType: String
+    - huntingThreshold: Float
+    - huntingSpeed: Float
+    - isHunting: Boolean
+    - Container of Strings(evidence)
+        accessed by index
+-----------------
+    Methods:
+    + getGhostType() : String
+    + getHuntingThreshold() : Float
+    + getHuntingSpeed() : Float
+    + getIsHunting() : Boolean
+    + getEvidence() : Container of Strings(evidence)
+
+    + setIsHunting(isHunting : Boolean) : void
+
+    + startHunting() : void
+    + endHunting() : void
+end of class Ghost
+
+Class Player
+-----------------
+    Attributes:
+    - playerID: String
+    - currentItemID: String
+    - maxCarry: Integer
+    - sanity: Float
+    - isAlive: Boolean
+    - Container of Strings(itemID)
+        accessed by index
+-----------------
+    Methods:
+    + getPlayerID() : String
+    + getCurrentItemID() : String
+    + getMaxCarry() : Integer
+    + getSanity() : Float
+    + getInventory() : Container of Items(inventory)
+    + isAlive() : Boolean
+    + isInventoryFull() : Boolean
+
+    + setCurrentItemID(itemID : String) : void
+    + reduceSanity(value : Float) : void
+    + die() : void
+
+    + pickUp(itemID : String) : void
+    + dropItem() : void     // drop current item
+    + useItem() : Boolean   // use current item
+end of class Player
+
+Class Item
+-----------------
+    Attributes:
+    - itemID: String
+    - itemType: String
+    - successRate: Float
+-----------------
+    Methods:
+    + getItemID() : String
+    + getItemType() : String
+    + useItem() : Boolean   // return based on successRate
+end of class Item
