@@ -1,0 +1,59 @@
+commit 58a98b4525f735e6e415a94e1ed4b54996102dc0
+Author: Evan Ho <oim452@usask.ca>
+Date:   Tue Oct 8 17:14:14 2024 -0600
+
+    Q4 complete
+
+commit af1cf01d2dd4a4179972025edd52f93f30d52569
+Author: Evan Ho <oim452@usask.ca>
+Date:   Mon Oct 7 18:03:39 2024 -0600
+
+    Q4 fix AchievementDemo & add regression test on Achievement.java
+
+commit af9ff9fd474b0d747ef1bc1edb83a4dd8bff7d71
+Author: Evan Ho <oim452@usask.ca>
+Date:   Mon Oct 7 17:49:08 2024 -0600
+
+    Q4 create Achievement.java and variables/method stubs
+
+commit 7dc185dd6c4368ddb106be177f52a759507f941c
+Author: Evan Ho <oim452@usask.ca>
+Date:   Mon Oct 7 17:32:18 2024 -0600
+
+    Q2 add comment in regression test
+
+commit 6cf178d7f6d673bf635cbfd78afce4a927e2fb21
+Author: Evan Ho <oim452@usask.ca>
+Date:   Mon Oct 7 17:31:08 2024 -0600
+
+    Q3 Update UML.pdf
+
+commit e8a5f74c8a9e588f3aa6bd4563020357fcb1b514
+Author: Evan Ho <oim452@usask.ca>
+Date:   Mon Oct 7 17:27:44 2024 -0600
+
+    Q3 UML finished
+
+commit 1c05587b606beef126233698a3d05e2c142d0d02
+Author: Evan Ho <oim452@usask.ca>
+Date:   Mon Oct 7 17:01:25 2024 -0600
+
+    Q2 Add Exception
+
+commit 0f28f83d95a665b91d8f79dde46f38870d5188ce
+Author: Evan Ho <oim452@usask.ca>
+Date:   Mon Oct 7 16:26:42 2024 -0600
+
+    Finish Q2
+
+commit 820415c458eb1192ae557ac37302e8e6008006eb
+Author: Evan Ho <oim452@usask.ca>
+Date:   Mon Oct 7 15:38:21 2024 -0600
+
+    Declare Variables/Method stubs and Write Regression Tests
+
+commit fe95936d0ded88a28a23828f58a33aa995be52af
+Author: Evan Ho <oim452@usask.ca>
+Date:   Mon Oct 7 13:31:16 2024 -0600
+
+    Create Module Assignment4
