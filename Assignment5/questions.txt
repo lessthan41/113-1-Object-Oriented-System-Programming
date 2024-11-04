@@ -1,0 +1,48 @@
+MULTIPLECHOICE
+Description
+C
+A. Option 1
+B. Option 2
+C. Option 3 is Correct
+D. Option 4
+FILLIN
+Description: Answer is "CMPT270"
+CMPT270
+MULTIPLECHOICE
+Description
+A
+A. Option 1 is Correct
+B. Option 2
+C. Option 3
+MULTIPLECHOICE
+Description
+D
+A. Option 1
+B. Option 2
+C. Option 3
+D. Option 4 is Correct
+MULTIPLECHOICE
+Description
+A
+A. Option 1 is Correct
+B. Option 2
+FILLIN
+Description: Answer is "GOOD"
+GOOD
+MULTIPLECHOICE
+Description
+E
+A. Option 1
+B. Option 2
+C. Option 3
+D. Option 4
+E. Option 5 is Correct
+FILLIN
+Description: Answer is "NICE"
+NICE
+FILLIN
+Description: Answer is "Q9"
+Q9
+FILLIN
+Description: Answer is "LAST"
+LAST
